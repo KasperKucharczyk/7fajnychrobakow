@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankieta o Robakach</title>
+    <link type="text/css" rel="stylesheet" href="bugs.css">
+</head>
+<body class="bugpage">
+    <h2>Ankieta o Robakach</h2>
+
+    <form action="/submit" method="POST">
+        <fieldset>
+            <legend>Wybierz swoje preferencje dotyczące robaków</legend>
+            
+            <label for="favorite_bug">Który robak najbardziej Ci się podoba?</label><br>
+            <select id="favorite_bug" name="favorite_bug">
+                <option value="lootbug">Lootbug</option>
+                <option value="jumping_spider">Skaczący Pająk</option>
+                <option value="elephant_beetle">Żuk Słoń</option>
+                <option value="leafcutter_ant">Mrówka Liściowa</option>
+                <option value="orchid_mantis">Modliszka Orchideowa</option>
+                <option value="silk_moth">Ćma Jedwabna</option>
+                <option value="trap_jaw_ant">Mrówka Zatrzaskowa</option>
+                <option value="weaver_ants">Mrówki Tkacze</option>
+            </select><br><br>
+
+            <label for="reaction">Jak reagujesz na obecność robaków?</label><br>
+            <input type="radio" id="calm" name="reaction" value="spokojnie"> Zachowuję spokój<br>
+            <input type="radio" id="annoyed" name="reaction" value="zdenerwowany"> Czuję się zdenerwowany<br>
+            <input type="radio" id="curious" name="reaction" value="ciekawy"> Jestem ciekawy<br><br>
+
+            <label for="solution">Jakie rozwiązanie wybierasz, gdy napotkasz robaka?</label><br>
+            <input type="radio" id="remove" name="solution" value="usunac"> Usuwam go delikatnie<br>
+            <input type="radio" id="ignore" name="solution" value="ignoruje"> Ignoruję go<br>
+            <input type="radio" id="eliminate" name="solution" value="usunac_ostro"> Usuwam go agresywnie<br><br>
+
+            <button type="submit">Wyślij</button>
+            <button type="reset">Wyczyść</button>
+        </fieldset>
+    </form>
+</body>
+</html>
