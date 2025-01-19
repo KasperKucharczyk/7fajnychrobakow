@@ -4,7 +4,7 @@ body{
    
 }
 .title{
-    animation: colorChangegreen 10s infinite forwards;
+    animation: colorChangered 10s infinite forwards;
     animation-timing-function: linear;
     color: white;
     text-align: center;
@@ -24,7 +24,7 @@ body{
     max-height: 8%;
 }
 .saymyname{
-    animation: colorChangegreen 10s infinite forwards;
+    animation: colorChangered 10s infinite forwards;
     animation-timing-function: linear;
     color: white;
     text-align: center;
@@ -85,7 +85,7 @@ a{
     height: auto;
 }
 .oh_no_our_table{
-    border: double green 6px;
+    
 }
 .its_broken{
     font: bold;
