@@ -7,74 +7,41 @@
     <link rel="stylesheet" href="bugs.css">
 </head>
 <body>
-    <div class="zmiennerobaki">
-        <img src="bug_models/jumping_spider.jpg" alt="jumping spider" onclick="showImage(this)">
-        <div class="nazwa">jumping spider</div>
+    <!-- Large Image Display -->
+    <div>
+        <img src="bug_models/jumping_spider.jpg" alt="jumping spider" width="600">
+        <div>jumping spider</div>
     </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/elephant_beetle.jpg" alt="elephant beetle" onclick="showImage(this)">
-        <div class="nazwa">elephant beetle</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/leafcutter_ant.jpg" alt="leafcutter ant" onclick="showImage(this)">
-        <div class="nazwa">leafcutter ant</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/Orchid_Mantis.jpg" alt="orchid mantis" onclick="showImage(this)">
-        <div class="nazwa">orchid mantis</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/silk_moth.jpg" alt="silk moth" onclick="showImage(this)">
-        <div class="nazwa">silk moth</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/trap-jaw_ant.jpg" alt="trap jaw ants" onclick="showImage(this)">
-        <div class="nazwa">trap jaw ants</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/Weaver_Ants.jpg" alt="weaver ants" onclick="showImage(this)">
-        <div class="nazwa">weaver ants</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/jumping_spider2.jpg" alt="jumping spider" onclick="showImage(this)">
-        <div class="nazwa">jumping spider</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/elephant_beetle2.jpg" alt="elephant beetle" onclick="showImage(this)">
-        <div class="nazwa">elephant beetle</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/leafcutter-ant2.jpg" alt="leafcutter ant" onclick="showImage(this)">
-        <div class="nazwa">leafcutter ant</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/orchid_mantis2.jpg" alt="orchid mantis" onclick="showImage(this)">
-        <div class="nazwa">orchid mantis</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/silk_moth2.jpg" alt="silk moth" onclick="showImage(this)">
-        <div class="nazwa">silk moth</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/trap-jaw_ant2.jpg" alt="trap jaw ants" onclick="showImage(this)">
-        <div class="nazwa">trap jaw ants</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/Weaver_Ants2.jpg" alt="weaver ants" onclick="showImage(this)">
-        <div class="nazwa">weaver ants</div>
-    </div>
-    <div class="zmiennerobaki">
-        <img src="bug_models/LOOTBUG.jpg" alt="lootbug" onclick="showImage(this)">
-        <div class="nazwa">lootbug</div>
+
+    <!-- Thumbnails -->
+    <div>
+        <img src="bug_models/jumping_spider.jpg" alt="jumping spider" width="150" onclick="showImage(this)">
+        <img src="bug_models/elephant_beetle.jpg" alt="elephant beetle" width="150" onclick="showImage(this)">
+        <img src="bug_models/leafcutter_ant.jpg" alt="leafcutter ant" width="150" onclick="showImage(this)">
+        <img src="bug_models/Orchid_Mantis.jpg" alt="orchid mantis" width="150" onclick="showImage(this)">
+        <img src="bug_models/silk_moth.jpg" alt="silk moth" width="150" onclick="showImage(this)">
+        <img src="bug_models/trap-jaw_ant.jpg" alt="trap jaw ants" width="150" onclick="showImage(this)">
+        <img src="bug_models/Weaver_Ants.jpg" alt="weaver ants" width="150" onclick="showImage(this)">
+        <img src="bug_models/jumping_spider2.jpg" alt="jumping spider" width="150" onclick="showImage(this)">
+        <img src="bug_models/elephant_beetle2.jpg" alt="elephant beetle" width="150" onclick="showImage(this)">
+        <img src="bug_models/leafcutter-ant2.jpg" alt="leafcutter ant" width="150" onclick="showImage(this)">
+        <img src="bug_models/orchid_mantis2.jpg" alt="orchid mantis" width="150" onclick="showImage(this)">
+        <img src="bug_models/silk_moth2.jpg" alt="silk moth" width="150" onclick="showImage(this)">
+        <img src="bug_models/trap-jaw_ant2.jpg" alt="trap jaw ants" width="150" onclick="showImage(this)">
+        <img src="bug_models/Weaver_Ants2.jpg" alt="weaver ants" width="150" onclick="showImage(this)">
+        <img src="bug_models/LOOTBUG.jpg" alt="lootbug" width="150" onclick="showImage(this)">
     </div>
 
     <script>
         function showImage(element) {
-            const largeImage = document.querySelector(".zmiennerobaki img");
-            const nameDiv = document.querySelector(".zmiennerobaki .nazwa");
+            // Find the large image container (first <div>) and its contents
+            const largeImage = document.querySelector("body > div img");
+            const largeImageText = document.querySelector("body > div div");
+
+            // Update the large image and its caption
             largeImage.src = element.src;
             largeImage.alt = element.alt;
-            nameDiv.textContent = element.alt;
+            largeImageText.textContent = element.alt;
         }
     </script>
 </body>
