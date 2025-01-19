@@ -7,36 +7,45 @@
     <link rel="stylesheet" href="bugs.css">
 </head>
 <body>
-    <!-- Large Image Display -->
-    <div>
-        <img src="bug_models/jumping_spider.jpg" alt="jumping spider" width="600">
-        <div>jumping spider</div>
-    </div>
+    <table style="width: 100%; height: 100vh; text-align: center;">
+        <tr>
+            <!-- Left Column with Thumbnails -->
+            <td style="vertical-align: top; width: 20%;">
+                <div>
+                    <img src="bug_models/jumping_spider.jpg" alt="jumping spider" width="100" onclick="showImage(this)">
+                    <img src="bug_models/elephant_beetle.jpg" alt="elephant beetle" width="100" onclick="showImage(this)">
+                    <img src="bug_models/leafcutter_ant.jpg" alt="leafcutter ant" width="100" onclick="showImage(this)">
+                    <img src="bug_models/Orchid_Mantis.jpg" alt="orchid mantis" width="100" onclick="showImage(this)">
+                    <img src="bug_models/silk_moth.jpg" alt="silk moth" width="100" onclick="showImage(this)">
+                </div>
+            </td>
 
-    <!-- Thumbnails -->
-    <div>
-        <img src="bug_models/jumping_spider.jpg" alt="jumping spider" width="150" onclick="showImage(this)">
-        <img src="bug_models/elephant_beetle.jpg" alt="elephant beetle" width="150" onclick="showImage(this)">
-        <img src="bug_models/leafcutter_ant.jpg" alt="leafcutter ant" width="150" onclick="showImage(this)">
-        <img src="bug_models/Orchid_Mantis.jpg" alt="orchid mantis" width="150" onclick="showImage(this)">
-        <img src="bug_models/silk_moth.jpg" alt="silk moth" width="150" onclick="showImage(this)">
-        <img src="bug_models/trap-jaw_ant.jpg" alt="trap jaw ants" width="150" onclick="showImage(this)">
-        <img src="bug_models/Weaver_Ants.jpg" alt="weaver ants" width="150" onclick="showImage(this)">
-        <img src="bug_models/jumping_spider2.jpg" alt="jumping spider" width="150" onclick="showImage(this)">
-        <img src="bug_models/elephant_beetle2.jpg" alt="elephant beetle" width="150" onclick="showImage(this)">
-        <img src="bug_models/leafcutter-ant2.jpg" alt="leafcutter ant" width="150" onclick="showImage(this)">
-        <img src="bug_models/orchid_mantis2.jpg" alt="orchid mantis" width="150" onclick="showImage(this)">
-        <img src="bug_models/silk_moth2.jpg" alt="silk moth" width="150" onclick="showImage(this)">
-        <img src="bug_models/trap-jaw_ant2.jpg" alt="trap jaw ants" width="150" onclick="showImage(this)">
-        <img src="bug_models/Weaver_Ants2.jpg" alt="weaver ants" width="150" onclick="showImage(this)">
-        <img src="bug_models/LOOTBUG.jpg" alt="lootbug" width="150" onclick="showImage(this)">
-    </div>
+            <!-- Center Column with Large Image -->
+            <td style="vertical-align: middle; width: 60%;">
+                <div>
+                    <img src="bug_models/jumping_spider.jpg" alt="jumping spider" width="500">
+                    <div>jumping spider</div>
+                </div>
+            </td>
+
+            <!-- Right Column with Thumbnails -->
+            <td style="vertical-align: top; width: 20%;">
+                <div>
+                    <img src="bug_models/trap-jaw_ant.jpg" alt="trap jaw ants" width="100" onclick="showImage(this)">
+                    <img src="bug_models/Weaver_Ants.jpg" alt="weaver ants" width="100" onclick="showImage(this)">
+                    <img src="bug_models/jumping_spider2.jpg" alt="jumping spider" width="100" onclick="showImage(this)">
+                    <img src="bug_models/elephant_beetle2.jpg" alt="elephant beetle" width="100" onclick="showImage(this)">
+                    <img src="bug_models/leafcutter-ant2.jpg" alt="leafcutter ant" width="100" onclick="showImage(this)">
+                </div>
+            </td>
+        </tr>
+    </table>
 
     <script>
         function showImage(element) {
-            // Find the large image container (first <div>) and its contents
-            const largeImage = document.querySelector("body > div img");
-            const largeImageText = document.querySelector("body > div div");
+            // Find the large image container (center column)
+            const largeImage = document.querySelector("table td:nth-child(2) img");
+            const largeImageText = document.querySelector("table td:nth-child(2) div");
 
             // Update the large image and its caption
             largeImage.src = element.src;
