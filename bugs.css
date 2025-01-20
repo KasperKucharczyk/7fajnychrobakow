@@ -42,7 +42,6 @@ body{
 }
 .linkbar2{
     display: none;
-    width: 0;
 }
 .saymyname{
     animation: colorChangered 10s infinite forwards;
