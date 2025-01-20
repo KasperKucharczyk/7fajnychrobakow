@@ -28,6 +28,12 @@ body{
     .linkbar{
         display: none;
     }
+    
+}
+.linkbar2{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
     .linkbar2{
         animation: colorChangered 10s infinite forwards;
         animation-timing-function: linear;
@@ -39,9 +45,6 @@ body{
         max-height: 8%;
         display: block;
     }
-}
-.linkbar2{
-    display: none;
 }
 .saymyname{
     animation: colorChangered 10s infinite forwards;
