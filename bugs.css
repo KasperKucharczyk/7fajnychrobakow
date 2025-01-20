@@ -23,6 +23,27 @@ body{
     border-radius: 40px; 
     max-height: 8%;
 }
+@media only screen and (max-width: 600px) {
+    .linkbar{
+        display: none;
+        width: 0;
+    }
+    .linkbar2{
+    animation: colorChangered 10s infinite forwards;
+    animation-timing-function: linear;
+    color: rgb(106, 24, 183);
+    text-align: center;
+    width: 100%;
+    padding: 0.2cm 0;
+    border-radius: 40px; 
+    max-height: 8%;
+    display: block;
+    }
+}
+.linkbar2{
+    display: none;
+    width: 0;
+}
 .saymyname{
     animation: colorChangered 10s infinite forwards;
     animation-timing-function: linear;
